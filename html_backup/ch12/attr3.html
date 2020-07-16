@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>속성 선택자</title>
+    <style>
+        .container { width: 800px; margin: 50px auto; }
+        ul { list-style: none; }
+        ul li { width: 15%; display: inline-block; }
+        ul li a { text-decoration:none; color: blue; padding: 10px;
+                    border: 1px solid black; }
+        [class ~= "button"] { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li><a href="#">메뉴 1</a></li>
+            <li><a href="#">메뉴 2</a></li>
+            <li><a href="#" class="buttons">메뉴 3</a></li>
+            <li><a href="#" class="flat-button">메뉴 4</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+
+

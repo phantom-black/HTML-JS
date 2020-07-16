@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>연습문제 2</title>
+    <style>
+        .container { width: 600px; margin: 50px auto; }
+        /* 1번 방법 */
+        /* .img-coffee { transition: 1s; }
+        .img-coffee:hover { border: 1px solid black; 
+                            border-radius: 10px; transform: rotate(20deg); } */
+        /* 2번 방법 */
+        .img-coffee:hover { animation: img-rotate 1s; }
+        @keyframes img-rotate {
+            0% {}
+            100% { border: 1px solid black; border-radius: 10px; 
+                    transform: rotate(20deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="13/coffee.jpg" class="img-coffee" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가상 요소</title>
+    <style>
+        .container { width: 600px; margin: 30px auto; }
+        /* first-line 첫번째 줄에 스타일을 적용 */
+        .content::first-line { text-decoration: underline; font-style: italic; }
+        /*  */
+        .content::first-letter { font-size: 2em; background-color: navy; 
+                                padding: 5px; font-style: normal; text-decoration: none;
+                                color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>가상 요소 : first-line, first-letter</h3>
+        <p class="content">
+            국가는 국민 모두의 생산 및 생활의 기반이 되는 국토의 효율적이고 균형있는 
+            이용·개발과 보전을 위하여 법률이 정하는 바에 의하여 그에 관한 필요한 제한과 의무를 과할 수 있다. 
+            제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 
+            각급 선거관리위원회는 선거인명부의 작성등 선거사무와 국민투표사무에 관하여 
+            관계 행정기관에 필요한 지시를 할 수 있다.
+        </p>
+    </div>
+</body>
+</html>

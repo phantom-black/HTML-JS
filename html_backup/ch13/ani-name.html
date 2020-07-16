@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>animation-name</title>
+    <style>
+        .container { width: 500px; margin: 40px auto; }
+        #box1, #box2 { width: 100px; height: 100px; margin: 20px; }
+        #box1 { background-color: #4cff00; border: 1px solid black;
+                animation-name: shape; animation-duration: 3s; }
+        #box2 { background-color: #8f06b0; border: 1px solid black;
+                animation-name: rotate; animation-duration: 3s; }
+
+        /* animation */
+        @keyframes shape {
+            from { border: 1px solid black; }
+            to { border: 1px solid black; border-radius: 50px; }
+        }
+        @keyframes rotate {
+            from { transform: rotateX(0deg); }
+            to { transform: rotateX(45deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box1"></div>
+        <div id="box2"></div>
+    </div>
+</body>
+</html>

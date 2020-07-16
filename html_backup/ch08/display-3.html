@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>display:none 속성</title>
+    <style>
+        #box1, #box2 { margin: 10px; }
+        .b1, .b2, .b3 { width: 150px; height: 150px; 
+                        margin: 10px; display: inline-block; }
+        .bg1 { background-color: red;}
+        .bg2 { background-color: green;}
+        .bg3 { background-color: blue;}
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <div class="b1"></div>
+        <div class="b2" style="display: none;"></div>
+        <div class="b3"></div>
+    </div>
+    <div id="box2">
+        <div class="b1"></div>
+        <div class="b2" style="visibility: hidden;"></div>
+        <div class="b3"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>브라우저 접두사 자동으로 붙이기</title>
+    <script src="prefixfree.min.js"></script>
+    <style>
+        #container { width: 600px; margin: 100px auto; }
+        .box { width: 120px; height: 60px; 
+               padding: 10px; border: 3px solid green; }
+        /*
+        .box:hover {
+            -webkit-transform: rotate(15deg);
+            -moz-transform: rotate(15deg);
+            -o-transform: rotate(15deg);
+            -ms-transform: rotate(15deg);
+            transform: rotate(15deg);
+        }
+        */
+        .box:hover { transform: rotate(15deg); }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box">Mouse Over</div>
+    </div>
+</body>
+</html>

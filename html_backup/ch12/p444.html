@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>first-of-type</title>
+    <style>
+        .container { width: 500px; margin: 50px auto; }
+        .content1 p:first-of-type { color: red; }
+        .content1 p:last-of-type { background-color: blue; }
+        /* only-child : 자식이 오직 하나일 때(다른 태그 요소는 아무것도 없을 때) */
+        .content2 ul:only-child { border: 2px dotted red; }
+        /* only-of-type : 자식이 오직 하나일 때(다른 태그 요소 있어도 됨) */
+        .content2 li:only-of-type { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content1">
+            <p>1. JAVA</p>
+            <p>2. JSP</p>
+            <p>3. HTML5</p>
+            <p>4. Javascript</p>
+            <p>5. Oracle</p>
+        </div>
+        <div class="content2">
+            <ul>프로그래밍
+                <li>자바</li>
+            </ul>
+            <ul>DBMS
+                <li>Oracle</li>
+                <br>
+            </ul>
+            <ul>웹프로그래밍
+                <li>ASP</li>
+                <li>PHP</li>
+                <li>JSP</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

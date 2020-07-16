@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>연습문제 3</title>
+    <style>
+        .container { width: 600px; margin: 100px auto; }
+        /* 1 */
+        /* 
+        .img-lamp { transition: all 1s; }
+        .img-lamp:hover { transform-origin: left top; transform: scale(1.5);
+                            box-shadow: 5px 5px 3px black; }
+         */
+         /* 2 */
+         .img-lamp:hover {
+            animation: img-scale 1s; 
+         }
+         @keyframes img-scale {
+             0% {}
+             100% {
+                 transform-origin: left top;
+                 transform: scale(1.5);
+                 box-shadow: 5px 5px 3px black;
+             }
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="13/lamp.jpg" class="img-lamp" alt="">
+    </div>
+</body>
+</html>

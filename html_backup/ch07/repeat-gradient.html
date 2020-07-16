@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>그라데이션 반복</title>
+    <style>
+        div { width: 500px; height: 300px; margin-bottom: 10px; }
+        .grad1 {
+            background: red;
+            background: repeating-linear-gradient(yellow, red);
+        }
+        .grad2 {
+            background: red;
+            background: repeating-linear-gradient(yellow, red 20px);
+        }
+        .grad2 {
+            background: red;
+            background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);
+        }
+    </style>
+</head>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+</body>
+</html>

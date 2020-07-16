@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테모둥</title>
+    <style>
+        div { width: 200px; height: 150px; display: inline-block; }
+        .round {
+            border: 2px solid red;
+            border-radius : 20px;
+        }
+        #bg {
+            background: url("08/pic1.jpg") no-repeat;
+            background-size: cover;
+        }
+        #bg2 {
+            border-top-left-radius: 20px; border-top-right-radius: 20px;
+        }
+        #bg3 { border-radius: 20px 70px; }
+    </style>
+</head>
+<body>
+    <div class="round"></div>
+    <div class="round" id="bg"></div>
+    <div class="round" id="bg2"></div>
+    <div class="round" id="bg3"></div>
+</body>
+</html>

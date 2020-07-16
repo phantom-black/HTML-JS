@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>연습문제 1</title>
+    <style>
+        .container { width: 600px; margin: 50px auto; }
+        .box { width: 100px; height: 100px; background-color: green; }
+        /* 1번 방법 */
+        /*.box { transition: background-color 1s ease-in; }
+        .box:hover { background-color: yellow; } */
+        /* 2번 방법 */
+        .box:hover {
+            /* animation-name: bg-color;
+            animation-duration: 1s; animation-timing-function: ease-in;  */
+            animation: bg-color 1s ease-in;
+        }
+        @keyframes bg-color {
+            0% { background-color: green; }
+            100% { background-color: yellow; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

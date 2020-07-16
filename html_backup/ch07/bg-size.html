@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배경 이미지 크기 지정</title>
+    <style>
+        div { width: 500px; height: 500px; border: 1px solid #000;
+            margin-bottom: 10px;
+            background: url('07/bg4.jpg') no-repeat left top; }
+        .bg1 { background-size: auto; } /* 이미지 전체 크기 */
+        .bg2 { background-size: 200px 150px; } /* 가로 200px 세로 150px로 줄여서 나타냄 */
+        .bg3 { background-size: 60% 40%; } /* 가로 60%, 세로 40%로 줄여서 표현 */
+        .bg4 { background-size: contain; } /* div 크기 안에 이미지 전체를 포함 */
+        .bg5 { background-size: cover;} /* div 전체를 덮도록 이미지를 확대 또는 축소*/
+        .bg6 { background-size: 100% 100%;} /* div 영역 안에 모든 이미지를 삽입 */
+    </style>
+</head>
+<body>
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+    <div class="bg4"></div>
+    <div class="bg5"></div>
+    <div class="bg6"></div>
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>박스모델의 너비와 높이 지정하기</title>
+    <style>
+        div { margin: 10px; }
+        .box1 {
+            width: 400px; /* 절대(고정) 크기 */
+            height: 100px;
+            background-color: red;
+        }
+        .box2 {
+            width: 50%; /* 상대(가변) 크기 : 부모의 크기의 50%를 차지 */
+            height: 100px;
+            background-color: red;
+        }
+        .box3 {
+            /* 박스 모델 box3: 총너비: 200+20+10=230, 총높이: 100+20+10=130 */
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 태그 연습</title>
+    <style>
+        table { border: 1px solid #000; }
+        caption { font-size: 20px; font-weight: bold; }
+        th, td { width: 150px; height: 30px; }
+        th { border: 1px solid #000; }
+        td { border: 1px solid #000; }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>수업 시간표2 (셀 합치기)</caption>
+        <thead>
+            <tr>
+                <th>시간</th>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+                <th>목요일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1교시</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td rowspan="3">웹응용</td>
+            </tr>
+            <tr>
+                <th>2교시</th>
+                <td rowspan="2">웹프로그래밍</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>3교시</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>4교시</th>
+                <td></td>
+                <td colspan="2">자바스크립트</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>5교시</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

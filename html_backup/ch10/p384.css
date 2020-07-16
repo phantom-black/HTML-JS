@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* 전체 */
+.container { width: 900px; margin: 0 auto; border: 1px solid black; }
+/* 타이틀, 메뉴 */
+header { height: 100px; background-color: rgb(50, 50, 200); }
+header h1 { float: left; width: 40%; margin-right: 100px; }
+header ul { list-style: none; }
+header ul li { display: inline-block; width: 10%; text-align: center; margin-top: 40px; }
+header ul li a { color: white; text-decoration: none; }
+header ul li a:hover { font-weight: bold; color: yellow; }
+/* 본문 */
+section article { float: left; width: 260px; border: 2px dotted cyan; padding: 11px; margin: 0 0 20px 10px; }
+section article dl dt { color: purple; font-weight: bold; }
+dt, dd { margin-bottom: 5px; }
+section article h3 { background: url('10/bg-note.png') no-repeat; padding-left: 30px; }
+/* aside */
+aside { clear: both; padding: 10px; background-color: mediumturquoise; border: 2px solid green; }
+/* footer */
+footer { height: 100px; background-color: rgb(20, 20, 20); }
+footer p { color: white; text-align: center; margin: 0; padding: 20px; line-height: 50px; }

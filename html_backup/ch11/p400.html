@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>비디오 파일 삽입하기</title>
+    <style>
+        .container { width: 800px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 비디오 형식 1개 지정 -->
+        <!-- <video src="11/media/Painting.mp4" controls autoplay loop></video> -->
+
+        <!-- 비디오 형식 여러 개 지정 -->
+        <video controls autoplay poster="11/bg2.jpg"> <!-- poster : 대체 이미지 -->
+            <source src="11/media/Painting.mp4" type="video/mp4">
+            <source src="11/media/Painting.webm" type="video/webm">
+            <source src="11/media/Painting.ogv" type="video/ogv">
+        </video>
+    </div>
+</body>
+</html>

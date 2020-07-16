@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>원형 그라데이션 크기 지정</title>
+    <style>
+        div { width: 300px; height: 300px; margin-bottom: 10px; }
+        ul { list-style: none;}
+        li { width: 300px; height: 300px; }
+        #div1 {
+            background: green;
+            background: -webkit-radial-gradient(circle closest-side at 30% 40%, white, yellow, green);
+            background: -moz-radial-gradient(circle closest-side at 30% 40%, white, yellow, green);
+            background: -o-radial-gradient(circle closest-side at 30% 40%, white, yellow, green);
+            background: radial-gradient(circle closest-side at 30% 40%, white, yellow, green);
+        }
+        #div2 {
+            background: green;
+            background: -webkit-radial-gradient(circle closest-corner at 30% 40%, white, yellow, green);
+            background: -moz-radial-gradient(circle closest-corner at 30% 40%, white, yellow, green);
+            background: -o-radial-gradient(circle closest-corner at 30% 40%, white, yellow, green);
+            background: radial-gradient(circle closest-corner at 30% 40%, white, yellow, green);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li id="div1"></li>
+            <li id="div2"></li>
+        </ul>
+    </div>
+</body>
+</html>

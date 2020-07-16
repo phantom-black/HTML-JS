@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>선형 그라데이션 지정</title>
+    <style>
+        div { width: 300px; height: 200px; margin-top: 10px; }
+        .grad {
+            background-color: #00f;
+            background: -webkit-linear-gradient(to right bottom, blue, white);
+            background: -moz-linear-gradient(to right bottom, blue, white);
+            background: -o-linear-gradient(to right bottom, blue, white);
+            background: linear-gradient(to right bottom, blue, white);
+        }
+        .grad2 {
+            background-color: #f00;
+            background: -webkit-linear-gradient(to right bottom, #f00, #fff);
+            background: -moz-linear-gradient(to right bottom, #f00, #fff);
+            background: -o-linear-gradient(to right bottom, #f00, #fff);
+            background: linear-gradient(to right bottom, #f00, #fff);
+        }
+        .grad3 {
+            background-color: #06f;
+            background: -webkit-linear-gradient(to right bottom, #06f, white 30%, #06f);
+            background: -moz-linear-gradient(to right bottom,  #06f, white 30%, #06f);
+            background: -o-linear-gradient(to right bottom,  #06f, white 30%, #06f);
+            background: linear-gradient(to right bottom,  #06f, white 30%, #06f);
+        }
+    </style>
+</head>
+<body>
+    <div class="grad"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+</body>
+</html>

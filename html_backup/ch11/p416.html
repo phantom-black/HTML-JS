@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>동영상으로 홈페이지 대문 만들기</title>
+    <style>
+        a { text-decoration: none; color: black; }
+        #bg { position: fixed; top: 0; left: 0;
+            width: auto; height: auto; min-width: 100%; min-height: 100%; z-index: -3;
+            background: url('11/flame.jpg') no-repeat left top / cover; }
+        #container { position: relative; text-align: center; margin: 30% 0 0 30%; }
+       
+        #container h1 { position: absolute; top: 40px; left: 300px; }
+        #container h2 { position: absolute; top: -20px; left: 250px; }
+    </style>
+</head>
+<body>
+    <video id="bg" src="11/media/flame.mp4" poster="11/flame.jpg" muted autoplay loop></video>
+    <div id="container">
+        <h1><a href="http://www.easyspub.co.kr" target="_blank">이지스퍼블리싱</a></h1>
+        <h2>사람을 구체적으로 도와주는 책</h2>
+    </div>
+</body>
+</html>
