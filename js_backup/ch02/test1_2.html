@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2장 연습문제 2번</title>
+    <!-- 
+        1분기 : 1200, 2분기: 1300, 3분기: 1000으로 판매량이 정해져 있고,
+        입력창으로부터 4분기의 판매량을 입력받아서 
+        1,2,3분기의 평균 판매량보다 많으면 "판매량이 평균 이상입니다.",
+        - q1, q2, q3, q4
+        적으면 "판매량이 평균 미달입니다."라고 출력.
+        2. 조건선택연산자 (추가 : if문 활용)
+    -->
+</head>
+<body>
+    <script>
+        var q1 = 1200;
+        var q2 = 1300;
+        var q3 = 1000;
+        var q4 = parseInt(prompt("4분기의 판매량을 입력하시오."));
+
+        var s = (q4 < (q1 + q2 + q3)/3) ? ("평균 미달") : ("평균 이상");
+        document.write("판매량이 " + s + "입니다.");
+    </script>
+</body>
+</html>

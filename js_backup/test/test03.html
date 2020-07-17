@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3번</title>
+    <!-- 
+        1. 확인창으로부터 메시지를 전달받아 전등의 점등/소등 여부를 변수에 저장.
+        2. 그 값으로부터 전등의 점등/소등 여부를 브라우저 화면에 메시지와 함께 이미지를 출력
+        3. if문 필요
+     -->
+</head>
+<body>
+    <script>
+        var volt = confirm("전등이 켜져 있습니까?");
+        if(volt) { // volt==true
+            document.write('<img src="images/lighton.png" width="200">');
+            document.write("점등");
+        } else {
+            document.write('<img src="images/lightoff.png" width="200">');
+            document.write("소등");
+        }
+    </script>
+</body>
+</html>
