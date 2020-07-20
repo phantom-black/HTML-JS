@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>switch문 연습</title>
+</head>
+<body>
+    <script>
+        var menu = prompt("메뉴를 선택하시오.(1-3)", "0");
+        
+        /*
+        // 1. if문
+        if(menu == 1) {
+            document.write("파일 열기");
+        } else if(menu == 2) {
+            document.write("파일 읽기");
+        } else if(menu == 3) {
+            document.write("파일 쓰기");
+        } else if(menu == 4) {
+            document.write("파일 닫기");
+        } else {
+            document.write("잘못 입력하셨습니다.<br> 다시 시작해주세요.");
+        }
+        */
+
+        // 2. switch ~ case문
+        switch() {
+            case 1:
+                document.write("메뉴 열기");
+                break;
+            case 2:
+                document.write("메뉴 읽기");
+                break;
+            case 3:
+                document.write("메뉴 쓰기");
+                break;
+            case 4:
+                document.write("메뉴 닫기");
+                break;
+            default:
+                document.write("잘못 입력하셨습니다.<br> 다시 시작해주세요.");
+        }
+    </script>
+</body>
+</html>

@@ -14,12 +14,17 @@
 </head>
 <body>
     <script>
+        // 입력창으로부터 입력받는 모든 값을 문자열
+        // 문자열의 값이 숫자일 때는 숫자로 계산한다.
         var price1 = prompt("교통비를 입력하세요(원).");
         var price2 = prompt("식비를 입력하세요(원).");
         var price3 = prompt("음료비를 입력하세요(원).");
 
+        // + : 숫자일 때는 값을 더함, 문자열일 때는 문자열을 연결
         var price_sum = parseInt(price1) + parseInt(price2) + parseInt(price3);
 
+        // true : 0을 제외한 모든 숫자, 모든 문자열
+        // false : 숫자 0, undefined, null
         var s = (price_sum>10000) ? ((price_sum-10000)+"원 초과했어요!") : ("돈 관리를 잘 했어요!");
         document.write(s);
     </script>
