@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0721 3번</title>
+    <!-- 
+        1. 자신이 태어난 월을 입력받아 월의 탄생석과 상징을 보여주는 프로그램
+        입력: 당신이 태어난 월을 입력하시오.(1~12)
+        출력: 입력한 월에 따라 탄생석 이미지를 보여주고, 탄생월, 탄생석, 탄생메시지를 출력
+        2. switch~case문으로 작성
+        3. 결과 화면 위에 월별 탄생석과 상징 정보를 표로 브라우저에 먼저 출력
+     -->
+     <style>
+         h1 { text-align: center; }
+         table { border-collapse: collapse; margin: 10px auto 30px; }
+         thead tr { height: 40px; background-color: #faf2ad; }
+         tbody th { background-color: #a4f8f1; }
+         th, td { border: 1px solid #000; height: 30px; text-align: center; }
+         td { width: 180px; }
+         img { display: block; margin: 0 auto; }
+         p { text-align: center; }
+     </style>
+</head>
+<body>
+    <h1>월별 탄생석 프로그램</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>월</th>
+                <th>월별 탄생석</th>
+                <th>상징 정보</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1월</th>
+                <td>가넷</td>
+                <td>사랑,진실</td>
+            </tr>
+            <tr>
+                <th>2월</th>
+                <td>자수정</td>
+                <td>평화,성실</td>
+            </tr>
+            <tr>
+                <th>3월</th>
+                <td>아쿠아마린</td>
+                <td>총명,용감</td>
+            </tr>
+            <tr>
+                <th>4월</th>
+                <td>다이아몬드</td>
+                <td>영원한사랑</td>
+            </tr>
+            <tr>
+                <th>5월</th>
+                <td>에메랄드</td>
+                <td>행복,행운</td>
+            </tr>
+            <tr>
+                <th>6월</th>
+                <td>진주</td>
+                <td>건강,부귀</td>
+            </tr>
+            <tr>
+                <th>7월</th>
+                <td>루비</td>
+                <td>영원한생명,열정,용기</td>
+            </tr>
+            <tr>
+                <th>8월</th>
+                <td>감람석</td>
+                <td>지혜,부부의행복</td>
+            </tr>
+            <tr>
+                <th>9월</th>
+                <td>사파이어</td>
+                <td>지혜,불변</td>
+            </tr>
+            <tr>
+                <th>10월</th>
+                <td>오팔</td>
+                <td>희망,순결</td>
+            </tr>
+            <tr>
+                <th>11월</th>
+                <td>토파즈</td>
+                <td>우정,인내</td>
+            </tr>
+            <tr>
+                <th>12월</th>
+                <td>터키석</td>
+                <td>성공,승리</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var month = parseInt(prompt("당신이 태어난 월을 입력하시오.(1~12)"));
+        var num;
+        var stone;
+        var msg;
+        switch(month) {
+            case 1:
+                num="01";
+                stone="가넷";
+                msg="사랑,진실";
+                break;
+            case 2:
+                num="02";
+                stone="자수정";
+                msg="평화,성실";
+                break;
+            case 3:
+                num="03";
+                stone="아쿠아마린";
+                msg="총명,용감";
+                break;
+            case 4:
+                num="04";
+                stone="다이아몬드";
+                msg="영원한사랑";
+                break;
+            case 5:
+                num="05";
+                stone="에메랄드";
+                msg="행복,행운";
+                break;
+            case 6:
+                num="06";
+                stone="진주";
+                msg="건강,부귀";
+                break;
+            case 7:
+                num="07";
+                stone="루비";
+                msg="영원한생명,열정,용기";
+                break;
+            case 8:
+                num="08";
+                stone="감람석";
+                msg="지혜,부부의행복";
+                break;
+            case 9:
+                num="09";
+                stone="사파이어";
+                msg="지혜,불변";
+                break;
+            case 10:
+                num="10";
+                stone="오팔";
+                msg="희망,순결";
+                break;
+            case 11:
+                num=11;
+                stone="토파즈";
+                msg="우정,인내";
+                break;
+            case 12:
+                num=12;
+                stone="터키석";
+                msg="성공,승리";
+                break;
+            default:
+                alert("잘못 입력했습니다.");
+                location.reload();
+        }
+        document.write("<img src='images/images_month_stone/stone"+num+".png'><br>");
+        document.write("<p>"+month+"월 / "+stone+" / "+msg+"</p>");
+    </script>
+</body>
+</html>

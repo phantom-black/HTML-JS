@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0721 5번</title>
+    <!-- 
+        1. 입력창으로 정수를 입력받아 그 수의 팩토리얼 값을 출력
+        입력: 정수 입력 : 5
+        출력: 5! = 5 * 4 * 3 * 2 * 1 = 120  브라우저로 출력
+     -->
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("정수 입력: "));
+        var result=1;
+        document.write(n+"! = ");
+        for(var i=n; i>0; i--) {
+            if(i!=n) {
+                document.write(' * ');
+            }
+            document.write(i);
+            result *= i;
+        }
+        document.write(' = '+result);
+
+        /*
+        var n = parseInt(prompt("정수 입력: "));
+        var result=1;
+        document.write(n+"! = ");
+        var i=n;
+        while(i>0) {
+            if(i!=n) {
+                document.write(' * ');
+            }
+            document.write(i);
+            result *= i;
+            i--;
+        }
+        document.write(' = '+result);
+        */
+    </script>
+</body>
+</html>

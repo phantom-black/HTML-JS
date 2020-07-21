@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0721 2번</title>
+    <!-- 
+        1. 국어, 영어, 수학 점수를 입력받아 평균과 학점을 구하는 프로그램
+        입력: 국어점수 입력, 영어점수 입력, 수학점수 입력
+        출력 : 평균점수, 학점을 출력(A: 90점 이상, B: 80~89, C: 70~79, D: 60~69, F: 60점 미만)
+        2. switch~case문으로 작성
+     -->
+</head>
+<body>
+    <script>
+        // Number() : 숫자로 만들어 주는 함수 <- 정수, 실수
+        // parseInt()
+        // parseFloat()
+        var kor = Number(prompt("국어점수 입력"));
+        var eng = Number(prompt("영어점수 입력"));
+        var math = Number(prompt("수학점수 입력"));
+        var avg = (kor + eng + math) / 3;
+        var result = parseInt(avg/10);
+        var grade;
+
+        switch(result) {
+            case 10: case 9:
+                grade = "A";
+                break;
+            case 8:
+                grade = "B";
+                break;
+            case 7:
+                grade = "C";
+                break;
+            case 6:
+                grade = "D";
+                break;
+            default:
+                grade = "F";
+        }
+        document.write("평균점수: "+avg+", 학점: "+grade);
+    </script>
+</body>
+</html>
