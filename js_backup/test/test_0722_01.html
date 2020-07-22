@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue</title>
+    <!-- 
+        1. 입력창에서 정수를 입력받아 1부터 입력받은 수까지를1씩 증가하여 출력하되, 7의 배수는 제외하시오.
+        입력 : 정수 입력 : 15
+        출력 : 1 2 3 4 5 6 8 9 10 11 12 13 15
+        브라우저 화면으로 출력
+     -->
+</head>
+<body>
+    <script>
+        var num = parseInt(prompt('정수 입력 : '));
+        for(var i=1; i<=num; i++) {
+            if(i%7==0) {
+                continue;
+            }
+            document.write(i+' ');
+        }
+    </script>
+</body>
+</html>

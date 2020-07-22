@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>중첩 for문</title>
+    <style>
+        .container { width: 1200px; margin: 20px auto; }
+        h1 { text-align: center; margin-bottom: 30px; }
+        .dan { display: inline-block; padding: 20px; margin: 15px; 
+                line-height: 30px; border: 1px solid black; }
+        .dan h3 { text-align: center; }
+    </style>
+    <!-- 
+        1. 구구단의 2단부터 9단까지 한번에 브라우저 출력
+     -->
+</head>
+<body>
+    <div class="container">
+        <h1>구구단</h1>
+        <script>
+            for(var i=2; i<10; i++) {
+                document.write('<div class="dan"><h3>'+i+'단</h3>');
+                for(var z=1; z<10; z++) {
+                    document.write(i+' * '+z+' = '+(i*z)+"<br>");
+                }
+                document.write('</div>');
+            }
+        </script>
+    </div>
+
+</body>
+</html>
