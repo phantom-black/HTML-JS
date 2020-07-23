@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2차원 배열의 활용</title>
+    <style>
+        .container { }
+        table { border-collapse: collapse; }
+        th, td { width: 50px; height: 25px; border: 1px solid #000; }
+        td { margin-left: 5px; }
+        th { background-color: #b6fdff; }
+        tr>td:first-child { background-color: #fff7ce; }
+    </style>
+    <!-- 
+        1. 학생 2차원 배열의 정보를 출력하시오.
+        2. 각 학생별 총점, 평균(소수점 2자리)를 기말고사 뒤에 출력하시오.
+        3. table로 출력하시오.
+     -->
+</head>
+<body>
+    <script>
+        var student = new Array(
+            Array("이익준", "컴공", 88, 76), // 이름, 과목, 중간, 기말
+            Array("양석형", "수학", 70, 83),
+            Array("채송화", "물리", 92, 95),
+            Array("안정원", "전자", 85, 92),
+            Array("김준완", "기계", 97, 88)
+        );
+        var tot;
+        var avg;
+        document.write("<div class='container'>");
+        for(var i=0; i<student.length; i++) {
+            tot=0;
+            for(var z=0; z<student[i].length; z++) {
+                document.write(student[i][z]+", ");
+                if(z>1) {
+                    tot+=student[i][z];
+                }
+            }
+            avg=tot/2;
+            document.write(tot+", "+avg.toFixed(2)+"<br>");
+        }
+        document.write("<table>");
+        document.write("<tr><th>이름</th><th>과목</th><th>중간</th><th>기말</th><th>총점</th><th>평균</th></tr>");
+        for(var i=0; i<student.length; i++) {
+            tot=0;
+            document.write("<tr>");
+            for(var z=0; z<student[i].length; z++) {
+                document.write("<td>"+student[i][z]+"</td>");
+                if(z>1) {
+                    tot+=student[i][z];
+                }
+            }
+            avg=tot/2;
+            document.write("<td>"+tot+"</td><td>"+avg.toFixed(2)+"</td>");
+            document.write("</tr>");
+        }
+        document.write("</table></div>");
+        
+    </script>
+</body>
+</html>
