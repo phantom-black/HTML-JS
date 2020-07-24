@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2차원 배열의 활용</title>
     <style>
-        .container { }
-        table { border-collapse: collapse; }
+        body { width: 100%; text-align: center; }
+        table { margin: 0 auto; width: 500px; border-collapse: collapse; }
         th, td { width: 50px; height: 25px; border: 1px solid #000; }
         td { margin-left: 5px; }
         th { background-color: #b6fdff; }
         tr>td:first-child { background-color: #fff7ce; }
+        tr>td.total { background-color: #c3ffb4; }
     </style>
     <!-- 
         1. 학생 2차원 배열의 정보를 출력하시오.
@@ -29,7 +30,8 @@
         );
         var tot;
         var avg;
-        document.write("<div class='container'>");
+        var result = new Array(0, 0, 0, 0);
+
         for(var i=0; i<student.length; i++) {
             tot=0;
             for(var z=0; z<student[i].length; z++) {
@@ -55,8 +57,14 @@
             avg=tot/2;
             document.write("<td>"+tot+"</td><td>"+avg.toFixed(2)+"</td>");
             document.write("</tr>");
+            result[0]+=student[i][2]; // 중간 합계
+            result[1]+=student[i][3]; // 기말 합계
+            result[2]+= tot;
+            result[3]+=avg;
         }
-        document.write("</table></div>");
+        result[3]=result[3]/student.length;
+        document.write("<tr><td class='total' colspan='2'>총점</td><td>"+result[0]+"</td><td>"+result[1]+"</td><td>"+result[2]+"</td><td>"+result[3].toFixed(2)+"</td></tr>");
+        document.write("</table>");
         
     </script>
 </body>
