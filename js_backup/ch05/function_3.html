@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 매개변수(인수)</title>
+</head>
+<body>
+    <script>
+        // 함수 정의
+        function myFnc(name, area) {
+            document.write("안녕하세요. "+name+"입니다.<br>");
+            document.write("사는 곳은 "+area+"입니다.<br>");
+        }
+
+        // 함수 호출
+        myFnc("이혜영", "경산");
+        myFnc("박철민"); // 두 번째 값은 undefined로 처리됨
+        myFnc("박연진", "대구", 27); // 세번째 값은 무시
+    </script>
+</body>
+</html>
