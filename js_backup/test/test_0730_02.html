@@ -9,6 +9,7 @@
         .info { width: 500px; margin: 0 auto; text-align: center; }
         .imgs { width: 600px; margin: 0 auto; }
         .imgs img { width: 91px; }
+        .imgs p { text-align: center; }
         .btn { margin: 0 auto; }
         .btn button { width: 150px; height: 50px; border: none; 
                     font-size: 30px; line-height: 25px;
@@ -33,10 +34,10 @@
             <p>배팅금액을 입력하고 플레이 버튼을 누르면 게임을 시작합니다.</p>
         </div>
         <div class="imgs">
+            <img src="images/dice_info.png" id="dice0" alt="주사위 이미지">
             <img src="images/dice_info.png" id="dice1" alt="주사위 이미지">
             <img src="images/dice_info.png" id="dice2" alt="주사위 이미지">
-            <img src="images/dice_info.png" id="dice3" alt="주사위 이미지">
-            <p></p>
+            <p id="result"></p>
         </div>
         <div class="btn">
             <button onclick="jackpot()">플레이</button>
@@ -45,17 +46,29 @@
     <script>
         // document.write('<img src="images/dice_1.png">');
         function jackpot() {
-            var cost = prompt("배팅금액을 입력하세요.(원)");
+            var rArr = new Array(3);
+
+            var cost = prompt("배팅금액을 입력하세요.(원)", "0");
             if(cost==null || cost <= 0 ) {
                 alert("배팅금액을 입력하세요.");
                 location.reload();
             }
-            for(var i=1; i<=3; i++) {
+            for(var i=0; i<3; i++) {
+                rArr[i] = Math.floor(Math.random()*6+1);
                 var d_num = document.getElementById('dice'+i);
-                var r_num = Math.floor(Math.random()*6+1);
-                d_num.setAttribute('src', 'images/dice_'+r_num+'.png');
+                d_num.setAttribute('src', 'images/dice_'+rArr[i]+'.png');
             }
-            
+
+            if(rArr[0]==rArr[1] || rArr[0]==rArr[2] || rArr[1]==rArr[2]) {
+                if(rArr[0]==rArr[1] && rArr[1]==rArr[2]) {
+                    cost*=5;
+                }
+                cost*=2;
+            } else {
+                cost*=0;
+            }
+
+            document.getElementById('result').innerHTML = cost+'원';
         }
     </script>
 </body>
