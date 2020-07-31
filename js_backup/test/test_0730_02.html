@@ -44,19 +44,39 @@
         </div>
     </div>
     <script>
+        //천단위 콤마 찍기
+        Number.prototype.getCommaValue = function() {
+            return this.valueOf().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        //문자가 섞여있으면 true 리턴, 숫자만 있으면 false 리턴
+        String.prototype.isAllChar = function() {
+            var regexp = /^[0-9]*$/
+            return !regexp.test(this.valueOf())
+        }
+
         // document.write('<img src="images/dice_1.png">');
         function jackpot() {
             var rArr = new Array(3);
 
-            var cost = prompt("배팅금액을 입력하세요.(원)", "0");
-            if(cost==null || cost <= 0 ) {
-                alert("배팅금액을 입력하세요.");
-                location.reload();
+            while(true) {
+                var cost = prompt("배팅금액을 입력하세요.(원)", "0")
+                if(cost === null) {
+                    return;
+                } else if(cost == '' || cost <=0 ) {
+                    alert("배팅금액을 입력하세요.");
+                    continue;
+                } else if(cost.isAllChar()){
+                    alert("숫자를 입력하세요.");
+                    continue;
+                }
+                break;
             }
-            for(var i=0; i<3; i++) {
+
+            for(var i=0; i<rArr.length; i++) {
                 rArr[i] = Math.floor(Math.random()*6+1);
-                var d_num = document.getElementById('dice'+i);
-                d_num.setAttribute('src', 'images/dice_'+rArr[i]+'.png');
+                var d_num = document.querySelector(`#dice${i}`);                
+                d_num.src =  `images/dice_${rArr[i]}.png`
             }
 
             if(rArr[0]==rArr[1] || rArr[0]==rArr[2] || rArr[1]==rArr[2]) {
@@ -67,8 +87,8 @@
             } else {
                 cost*=0;
             }
-
-            document.getElementById('result').innerHTML = cost+'원';
+            
+            document.querySelector('#result').innerHTML = `${cost.getCommaValue()}원`;
         }
     </script>
 </body>

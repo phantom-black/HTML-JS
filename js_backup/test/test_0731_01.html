@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밀리의 서재 또는 윌라</title>
+    <style>
+        .container { width: 500px; margin: 30px auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>밀리의 서재에서 읽은 책</h1>
+        <div class="btn">
+            <button onclick="inputBook()">읽은 책 추가</button>
+        </div>
+        <div class="bookList">
+            <ul>
+                <li>
+                    <span>책 제목</span>
+                    <input type="button" class="conf" onclick="showInfo()">확인
+                    <input type="button" class="del">삭제
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // 객체 생성자 함수
+        function Book(title, author, volume, price) {
+            // property
+            this.title = title;
+            this.author = author;
+            this.volume = volume;
+            this.price = price;
+        }
+
+        // 프로토타입의 메소드
+        Book.prototype.showInfo = function() {
+            var info = '책 제목: '+this.title+'<br>저자: '+this.author+', 페이지 수: '+this.volume+', 가격: '+this.price;
+            alert(info);
+        }
+
+        Book.prototype.deleteBook = function() {
+            
+        }
+
+        Book.prototype.inputBook = function() {
+            var nTitle = prompt('책 제목 입력');
+            var nAuthor = prompt('저자 입력');
+            var nVolume = prompt('페이지 수 입력');
+            var nPrice = prompt('가격 입력');
+            new Book(nTitle, nAuthor, nVolume, nPrice);
+
+            var list_col = document.createElement('li');
+            lsit_col.innerHTML ='<span>'+this.title+'</span><input type="button" class="conf" onclick="showInfo()">확인<input type="button" class="del">삭제';
+            document.querySelector('#bookList ul').appendChild(list_col);
+        }
+    </script>
+</body>
+</html>
