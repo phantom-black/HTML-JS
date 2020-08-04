@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 객체 4</title>
+    <style>
+        .container { width: 500px; margin: 0 auto; }
+        #light { width: 30%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>전구 점등/소등</h3>
+        <hr>
+        <button id="btnLight">점등</button>
+        <hr>
+        <img src="images/lightoff.png" alt="" id="light">
+    </div>
+
+    <script>
+        var btnLight = document.querySelector('#btnLight');
+        var imgLight = document.querySelector('#light');
+
+        btnLight.addEventListener('click', changeLight);
+
+        function changeLight() {
+            if(btnLight.innerHTML == "점등") { // 점등일 때
+                imgLight.setAttribute("src", "images/lighton.png");
+                btnLight.innerHTML = '소등';
+                btnLight.setAttribute("style","background-Color:lightgray")
+                // imgLight.src = 'images/lighton.png';
+                // btnLight.style.background = "lightgray";
+            } else { // 소등일 때
+                imgLight.setAttribute("src", "images/lightoff.png");
+                btnLight.innerHTML = '점등';
+                btnLight.setAttribute("style", "background-Color:lightblue")
+                // imgLight.src = 'images/lightoff.png';
+                // btnLight.style.background = "lightblue";
+            }
+        }
+    </script>
+</body>
+</html>
