@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result" class="cls"></div>
+    <script>
+        let ab=10;
+        const cc='가가';
+
+        let re = `안녕하세요 제 나이는 ${ab}입니다.`
+
+        var fn1 = function(n1, n2) { // js는 이름없는 함수를 변수에 담을 수 있음
+            return n1+n2
+        }
+
+        var fn2 = (n1, n2) => { // arrow function
+            return n1+n2
+        }
+
+        var eleResult = document.getElementById('result')
+        var eleClses = document.getElementsByClassName('cls')
+
+        var eleclses2 = document.qeurySelectorAll('.cls')
+        
+
+        var res = fn1(5, 10)
+
+        result.innerHTML = res // id는 그냥 가져올 수 있음, 최신 버전부터 적용됨
+    </script>
+</body>
+</html>

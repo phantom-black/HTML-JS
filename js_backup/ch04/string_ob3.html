@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 <body>
     <script>
         var userEmail = prompt("당신의 이메일 주소는?", "");
-        // 도메인 - or.kr: 비영리단체, go.kr:공공기관, ac.kr: 대학교
+        // 도메인 - or.kr: 비영리단체, go.kr: 공공기관, ac.kr: 대학교
         var arrUrl = ['.co.kr', '.com', '.net', '.or.kr', '.go.kr', '.ac.kr'];
 
         // 변수의 초기화
@@ -16,8 +16,8 @@
         var check2 = false;
 
         // 이메일 유효성 검사 1
-        if(userEmail.indexOf("@")>0) {
-            check=true;
+        if(userEmail.indexOf("@") > 0) {
+            check1 = true; // !check1;
         }
 
         // 이메일 유효성 검사 2
@@ -32,7 +32,7 @@
 
         // 확인
         if(check1 && check2) {
-            document.write(userEmail+"<br>");
+            document.write(userEmail + "<br>");
         } else {
             //alert("이메일의 형식이 잘못되었습니다.");
             document.write("이메일 형식이 잘못되었습니다.");

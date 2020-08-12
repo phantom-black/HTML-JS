@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>객체 활용 2</title>
     <!-- 
-        (2) 인스턴스 객체
-        - 객체 생성자 함수를 사용하여 객체를 생성
-        - this : 현재 코드를 실행하는 객체를 나타내는 키워드, this는 생성되는 객체 자신
-        - 객체 생성자 함수를 통해서 객체를 만들 때 반드시 new 키워드를 사용하여 생성해야 함
-     -->
+    (2) 객체
+    - 객체 생성자 함수를 사용하여 객체를 생성.
+    - this : 현재 코드를 실행하는 객체를 나타내는 키워드, this는 생성되는 객체 자신.
+    - 객체 생성자 함수를 통해서 객체를 만들때 반드시 new 키워드를 사용하여 생성해야함.
+-->
 </head>
 <body>
     <script>
@@ -28,7 +28,9 @@
         var s4 = new Student('채송화', '신경외과', 39);
         var s5 = new Student('안정원', '소아외과', 45);
 
-        document.write("이름: "+s1.name+"<br>");
+        document.write("이름: " + s1.name + "<br>");
+        document.write("전공: " + s1.major + "<br>");
+        document.write("나이: " + s1.age + "<br>");
     </script>
 </body>
 </html>

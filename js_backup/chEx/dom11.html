@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>애니메이션 효과 구현</title>
+    <title>애니메이션 효과 구현(타이머 함수)</title>
     <style>
-        .container { width: 500px; margin: 0 auto; }
-        #clock { width: 250px; background-color: skyblue; text-align: center; 
-                display: inline-block; padding: 10px; }
+        .container { width: 500px; margin: 0 auto;}
+        h2 { text-align: center;}
+        #box1 { text-align: center;}
+        #clock { width: 250px; background-color: skyblue; text-align: center;
+        display: inline-block; padding: 10px;}
     </style>
 </head>
 <body>
@@ -16,12 +18,10 @@
         <div id="box1">
             <h1 id="clock"></h1>
         </div>
-        
     </div>
     <script>
         var clock = document.getElementById("clock");
-       
-
+    
         function changeTime() {
             var date = new Date();
             var hour = date.getHours();
@@ -32,8 +32,7 @@
         }
 
         //changeTime();
-        setInterval(changeTime, 1000) //1초마다 changeTime 함수 호출
+        setInterval(changeTime, 1000); // 1초마다 changeTime 함수 호출
     </script>
-   
 </body>
 </html>

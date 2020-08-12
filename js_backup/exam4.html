@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function meth(n1, n2, n3) {
+        //     console.log('n1 : ' + n1)
+        //     console.log('n2 : ' + n2)
+        //     console.log('n3 : ' + n3)
+        //     console.log('-----------')
+        // }
+
+        // meth(1)
+        // meth(1, 2)
+        // meth(1, 2, 3)
+        // meth(1, 2, 3, 4)
+
+        // function meth2() {
+        //     console.log(arguments[2])
+        //     console.log('n1 : ' + n1)
+        // }
+
+        // meth1(1)
+        // meth1(1, 2)
+        // meth1(1, 2, 3)
+        // meth1(1, 2, 3, 4)
+
+        var fnSum = function(n1, n2) {
+            return n1 + n2
+        }
+
+        var fnMulti = function(n1, n2) {
+            return n1 * n2
+        }
+
+        function doCalc(fn, n1, n2) {
+            // A
+            var a1 = 10
+            var a2 = 20
+
+            // B
+            var res = fn(a1, a2)
+
+            // C
+            console.log('res : ' + res)
+        }
+
+        doCalc(fnSum)
+        doCalc(fnMulti)
+    </script>
+</body>
+</html>

@@ -1,71 +1,54 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2차원 배열의 활용</title>
-    <style>
-        body { width: 100%; text-align: center; }
-        table { margin: 0 auto; width: 500px; border-collapse: collapse; }
-        th, td { width: 50px; height: 25px; border: 1px solid #000; }
-        td { margin-left: 5px; }
-        th { background-color: #b6fdff; }
-        tr>td:first-child { background-color: #fff7ce; }
-        tr>td.total { background-color: #c3ffb4; }
-    </style>
     <!-- 
-        1. 학생 2차원 배열의 정보를 출력하시오.
-        2. 각 학생별 총점, 평균(소수점 2자리)를 기말고사 뒤에 출력하시오.
-        3. table로 출력하시오.
+    1. 학생 2차원 배열의 정보를 출력하시오.
+    2. 각 학생별 총점, 평균(소숫점2째자리)를 기말고사 뒤에 출력하시오.
+    3. table로 출력하시오.
      -->
 </head>
 <body>
     <script>
         var student = new Array(
-            Array("이익준", "컴공", 88, 76), // 이름, 과목, 중간, 기말
-            Array("양석형", "수학", 70, 83),
-            Array("채송화", "물리", 92, 95),
-            Array("안정원", "전자", 85, 92),
-            Array("김준완", "기계", 97, 88)
+            Array("이익준", "컴공", 88, 76, 0, 0), // 이름,전공,중간,기말,총점,평균
+            Array("양석형", "수학", 70, 83, 0, 0),
+            Array("채송화", "물리", 92, 95, 0, 0),
+            Array("안정원", "전자", 85, 92, 0, 0),
+            Array("김준완", "기계", 97, 88, 0, 0),
         );
-        var tot;
-        var avg;
-        var result = new Array(0, 0, 0, 0);
+        // 통계를 저장할 1차원 배열 : 중간의 합계, 기말의 합계, 총점의 합계, 평균의 합계
+        var result = new Array(0, 0, 0, 0); 
+        var title = ['이름', '전공', '중간', '기말', '총점', '평균'];
 
-        for(var i=0; i<student.length; i++) {
-            tot=0;
-            for(var z=0; z<student[i].length; z++) {
-                document.write(student[i][z]+", ");
-                if(z>1) {
-                    tot+=student[i][z];
-                }
-            }
-            avg=tot/2;
-            document.write(tot+", "+avg.toFixed(2)+"<br>");
+        document.write("<table border=1>");
+        document.write("<tr>");
+        for(var i=0; i<title.length; i++) {
+            document.write("<td>" + title[i] + "</td>");
         }
-        document.write("<table>");
-        document.write("<tr><th>이름</th><th>과목</th><th>중간</th><th>기말</th><th>총점</th><th>평균</th></tr>");
+        document.write("</tr>");
         for(var i=0; i<student.length; i++) {
-            tot=0;
             document.write("<tr>");
-            for(var z=0; z<student[i].length; z++) {
-                document.write("<td>"+student[i][z]+"</td>");
-                if(z>1) {
-                    tot+=student[i][z];
-                }
+            for(var j=0; j<student[i].length-2; j++) {
+                document.write("<td>" + student[i][j] + "</td>");
+                student[i][4] = student[i][2] + student[i][3];
             }
-            avg=tot/2;
-            document.write("<td>"+tot+"</td><td>"+avg.toFixed(2)+"</td>");
+            student[i][5] = student[i][4] / 2;
+            document.write("<td>" + student[i][4] + "</td>");
+            document.write("<td>" + student[i][5].toFixed(2) + "</td>");
             document.write("</tr>");
-            result[0]+=student[i][2]; // 중간 합계
-            result[1]+=student[i][3]; // 기말 합계
-            result[2]+= tot;
-            result[3]+=avg;
+            result[0] += student[i][2]; // 중간의 합계
+            result[1] += student[i][3]; // 기말의 합계
+            result[2] += student[i][4]; // 총점의 합계
+            result[3] += student[i][5]; // 평균의 합계
         }
-        result[3]=result[3]/student.length;
-        document.write("<tr><td class='total' colspan='2'>총점</td><td>"+result[0]+"</td><td>"+result[1]+"</td><td>"+result[2]+"</td><td>"+result[3].toFixed(2)+"</td></tr>");
-        document.write("</table>");
-        
+        document.write("<tr><td colspan='2'>통계</td>");
+        for(var i=0; i<result.length; i++) {
+            document.write("<td>"+(result[i]/student.length).toFixed(2)+"</td>");
+        }
+        document.write("</tr></table>");
     </script>
 </body>
 </html>

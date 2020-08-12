@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name: '홍길동',
+            age: 10,
+            showName: function() { // 함수가 변수 안에 포함됨 -> this가 변수 내의 친구들 가리킴
+                console.log('name : ' + this.name + ', age : ' + this.age)
+            }
+        }
+
+        obj.showName()
+
+        var obj2 = {
+            name: '홍길동',
+            age: 10,
+            showName: () => { // 함수가 객체 안에 소속되지 않고 최상위에 등록됨 -> 이때의 this는 객체가 아니라 함수 자신을 의미함
+                console.log(this.name === '')
+                console.log('name : ' + this.name + ', age : '+this.age)
+            }
+        }
+
+        obj2.showName()
+    </script>
+</body>
+</html>
