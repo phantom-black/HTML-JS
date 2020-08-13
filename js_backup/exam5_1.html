@@ -8,6 +8,12 @@
         .lbl:first-child {
             margin-right: 20px;
         }
+        .btn {
+            width: 40px;
+        }
+        .btn:not(:last-child) {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -33,12 +39,48 @@
             return label_adult
         }
 
+        function makeSeatBtns(arr, colCnt) {
+            var outerDiv = document.createElement('div')
+            /*
+            for(var i=0; i<arr.length; i++) {
+                var innerDiv = document.createElement('div')
+                for(var z=1; z<=colCnt; z++) {
+                    var btn = document.createElement('button')
+                    btn.innerHTML = `${arr[i]}${z}`
+                    innerDiv.appendChild(btn)
+                }
+                outerDiv.appendChild(innerDiv)
+            }
+            */
+
+            arr.forEach(function(item) {
+                var innerDiv = document.createElement('div')
+
+                for(var i=1; i<=colCnt; i++) {
+                    var btn = document.createElement('button')
+                    btn.setAttribute('class', 'btn')
+                    btn.innerText = `${item}${i}`
+                    innerDiv.appendChild(btn)
+                }
+
+                outerDiv.appendChild(innerDiv)
+
+            })
+
+            return outerDiv
+        }
+
         function init() {
             var select_adult = makeSelect('성인', 'sel_adult_member_cnt')
             var select_teen = makeSelect('청소년', 'sel_teen_member_cnt')
 
             memberContainer.appendChild(select_adult)
             memberContainer.appendChild(select_teen)
+
+            var arr = ['A', 'B', 'C']
+            var seat_btns = makeSeatBtns(arr, 5)
+            seatsContainer.appendChild(seat_btns) // seatsContainer.innerHTML = seat_btns
+
         }
         
         init()

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        Array.prototype.arr = []
+        Array.prototype.forEach2 = function(fn) {
+            for(var i=0; i<this.arr.length; i++) {
+                var item = this.arr[i]
+                fn(item)
+            }
+        }
+
+        var objArr = new Array()
+        objArr.arr = ['A', 'B', 'C']
+
+        objArr.forEach2(function(a) {
+            alert(a)
+        })
+
+        // map : 기존 객체를 수정하지 않은 채 모든 배열에 일정한 규칙으로 값을 변경하고 싶을 때 사용
+    </script>
+</body>
+</html>
