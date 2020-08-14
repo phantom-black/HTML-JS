@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title> 
+</head>
+<body>
+    <script>
+        Array.prototype.arr = []
+        Array.prototype.filter2 = function(fn) {
+            var result = []
+            for(var i=0; i<this.arr.length; i++) {
+                var item = this.arr[i]
+                if(fn(item)) {
+                    result.push(item)
+                }
+            }
+            return result
+        }
+        
+        var varDdd = function ddd(a) {
+            return a % 2 == 0
+        }
+
+        var originArr = [3, 5, 9, 10, 23, 12, 22]
+        var result = originArr.filter(function(item) {
+            // if(item%2==0) {
+            //     return true
+            // }
+            return item > 10 && item % 2 == 0
+        })
+        var result2 = originArr.filter(varDdd)
+        console.log(`result : ${result}`)
+        console.log(`result2 : ${result2}`)
+
+
+        var myArr = Array()
+        myArr.arr = [3, 5, 9, 10, 23, 12, 22]
+        var myResult  = myArr.filter2(function(item) {
+            return item % 2 == 1
+        })
+
+        console.log(`myResult : ${myResult}`)
+
+    </script>
+</body>
+</html>
